@@ -1,0 +1,21 @@
+<div class="anime-form mt-5">
+    <h2>Add Anime To Watch List</h2>
+    <div class="row g-2">
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control"  [formControl]="title" id="floatingInput" placeholder="Naruto">
+                <label for="floatingInput">Anime Title </label>
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" [formControl]="streamingService" id="floatingInput" placeholder="Netflix">
+                <label for="floatingInput">Streaming Service</label>
+            </div>
+        </div>
+    </div> 
+    <div class="d-grid justify-content-md-end">
+        <button type="button" class="btn btn-primary" (click)="addAnime()" >Submit</button>
+    </div>    
+</div>
+

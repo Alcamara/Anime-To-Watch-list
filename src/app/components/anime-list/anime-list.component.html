@@ -1,0 +1,25 @@
+<div class="anime-list">
+    <h2>Anime Watch List</h2>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Streaming Service</th>
+            <th scope="col"> </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let anime of animes"  >
+            <th scope="row">{{ anime.entryNum }} </th>
+            <td>{{anime.title}} </td>
+            <td> {{anime.streamingService}} </td>
+            <td class="d-grid gap-5 d-md-block">
+              <button type="button" class="btn btn-outline-success" (click)="onSelect(anime)">View</button>
+              <button type="button" class="btn btn-danger" (click)="deleteAnime(anime)">Delete</button>  
+            </td>  
+          </tr>
+        </tbody>
+      </table>
+      <app-anime-list-detail [anime]="selectedAnime"></app-anime-list-detail>
+</div>
